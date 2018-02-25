@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "CustomNav.prepare(for:sender:):CustomNav.swift">
+      </ContextState>
+      <ContextState
+         contextName = "-[UnipayHandler emvTransactionData:errorCode:swipeDelegate:]:UnipayHandler.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[BridgeCommService sendRequest:testMode:onCompletion:]:BridgeCommService.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "request.XMLString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Unipay activateCardReader]:Unipay.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_paymentRequest.amount.doubleValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[UnipayHandler swipeMSRData:swipeDelegate:]:UnipayHandler.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PayGuardianTransaction processRequest:]:PayGuardianTransaction.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.unipay">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[UnipayHandler processCtls:swipeDelegate:]:UnipayHandler.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[NSString stringWithFormat:@&quot;%02X&quot;, [data length]/2]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CustomNav.viewDidDisappear(_:):CustomNav.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in static Transaction.processPayment(vc:onComplete:):Transaction.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "payment?.bridgeCommResponse">
+            </PersistentString>
+            <PersistentString
+               value = "payment.receipt">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SubViewController.amountFieldChanged(_:):SubViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Transaction.getAmount()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

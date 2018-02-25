@@ -1,0 +1,6 @@
+framework module PayGuardian_SDK {
+  umbrella header "PayGuardian_SDK.h"
+
+  export *
+  module * { export * }
+}

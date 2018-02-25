@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uog-XR-1f8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="UJh-oF-lNn">
+            <objects>
+                <viewController id="2ph-sq-2Gt" customClass="IntroViewController" customModule="BridgePay_POS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aLp-QT-JFC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FM4-je-Le8">
+                                <rect key="frame" x="87.5" y="523" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.10980392160000001" green="0.59607843140000005" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1JB-Lv-voA"/>
+                                    <constraint firstAttribute="height" constant="50" id="pEz-YW-coC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="2O5-OU-gQj"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fue-t8-oKd">
+                                <rect key="frame" x="25" y="-8.5" width="325" height="540"/>
+                                <subviews>
+                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="y2v-Ko-wq4">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="100"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyh-Lg-deG">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="100"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="block-icon-o.png" translatesAutoresizingMaskIntoConstraints="NO" id="dj6-QX-KmN">
+                                                        <rect key="frame" x="-5" y="10" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="1A1-EW-qrr">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="60" id="hhG-9g-BQf">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="dj6-QX-KmN" firstAttribute="centerX" secondItem="vyh-Lg-deG" secondAttribute="centerX" id="8nH-85-2nL"/>
+                                                    <constraint firstItem="dj6-QX-KmN" firstAttribute="centerY" secondItem="vyh-Lg-deG" secondAttribute="top" constant="42" id="Ffk-aX-N3s">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="100" id="Zlh-hg-rFi"/>
+                                                    <constraint firstAttribute="width" constant="65" id="tYP-90-gy4">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                                    </constraint>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogH-DP-X8T">
+                                                <rect key="frame" x="55" y="0.0" width="270" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="450" id="8br-wV-O1B">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="270"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="100" id="Nza-rc-3el">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="PCI PA-DSS">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="22" name="Arial-BoldMT"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="An out-of-scope Payment Application - Data Security Standard solution">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="24" name=".AppleSystemUIFont"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="PCI PA-DSS">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="An out-of-scope Payment Application - Data Security Standard solution">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="IfZ-pj-dkr">
+                                        <rect key="frame" x="0.0" y="110" width="325" height="100"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8h2-3K-5VH">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="100"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cert-icon-o.png" translatesAutoresizingMaskIntoConstraints="NO" id="F5k-Y7-JXp">
+                                                        <rect key="frame" x="-5" y="10" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="HYT-H3-e5A">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" constant="60" id="WGM-Nl-5WA">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="F5k-Y7-JXp" firstAttribute="top" secondItem="8h2-3K-5VH" secondAttribute="top" constant="12" id="4Jx-0h-thr">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                                    </constraint>
+                                                    <constraint firstItem="F5k-Y7-JXp" firstAttribute="centerX" secondItem="8h2-3K-5VH" secondAttribute="centerX" id="WNn-nx-svs"/>
+                                                    <constraint firstAttribute="height" constant="100" id="xpi-Vu-snd"/>
+                                                    <constraint firstAttribute="width" constant="65" id="yHp-b2-fWH">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                                    </constraint>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxm-XQ-rPr">
+                                                <rect key="frame" x="55" y="0.0" width="270" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="450" id="C0V-gn-amc">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="270"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="100" id="tqm-u7-YLA"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="EMV R">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="23" name="Arial-BoldMT"/>
+                                                            <font key="NSOriginalFont" size="20" name="Arial-BoldMT"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="eady">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="23" name="Arial-BoldMT"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" metaFont="system" size="20"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="Off-loads the certification responsibility from merchants and integrators">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="24" name=".SFNSDisplay"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="EMV R">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                                <font key="NSOriginalFont" size="20" name="Arial-BoldMT"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="eady">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="20"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Off-loads the certification responsibility from merchants and integrators">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name=".SFNSDisplay"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-Li-Jhm">
+                                        <rect key="frame" x="0.0" y="220" width="325" height="100"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfD-OR-ue6">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="100"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flow-icon-o.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Ge-0q-vQ5">
+                                                        <rect key="frame" x="-5" y="22" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="aeG-sw-M17">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="60" id="hEn-2J-ovZ">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="7St-7q-Slf"/>
+                                                    <constraint firstItem="6Ge-0q-vQ5" firstAttribute="centerX" secondItem="dfD-OR-ue6" secondAttribute="centerX" id="jHP-as-FxO"/>
+                                                    <constraint firstAttribute="width" constant="65" id="nvv-zg-8Vd">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                                    </constraint>
+                                                    <constraint firstItem="6Ge-0q-vQ5" firstAttribute="top" secondItem="dfD-OR-ue6" secondAttribute="top" constant="22" id="x2t-jl-uJB"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBc-AS-Fgf">
+                                                <rect key="frame" x="55" y="0.0" width="270" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="450" id="bu6-rt-xXq">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="270"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="100" id="mGt-ay-WPk"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Agnostic Processor Options">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="23" name="Arial-BoldMT"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="Choose the processor of your choice">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="24" name=".AppleSystemUIFont"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Agnostic Processor Options">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+Choose the processor of your choice</string>
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="qmD-Qb-0QB" userLabel="Fourth Stack View">
+                                        <rect key="frame" x="0.0" y="330" width="325" height="100"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qp8-U2-4v7">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="100"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross-platform-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vdv-Dh-l0S">
+                                                        <rect key="frame" x="-5" y="20" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="S9C-K2-GQb">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" constant="60" id="c6i-kn-O4A">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Vdv-Dh-l0S" firstAttribute="centerX" secondItem="qp8-U2-4v7" secondAttribute="centerX" id="g6X-Cc-SER"/>
+                                                    <constraint firstAttribute="height" constant="100" id="kgK-ad-Wqy"/>
+                                                    <constraint firstAttribute="width" constant="65" id="qi4-fc-6FG">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                                    </constraint>
+                                                    <constraint firstItem="Vdv-Dh-l0S" firstAttribute="top" secondItem="qp8-U2-4v7" secondAttribute="top" constant="15" id="yOb-Lv-htI">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                                    </constraint>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mC-jp-Xew">
+                                                <rect key="frame" x="55" y="0.0" width="270" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="450" id="K4U-Kj-Tnf">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="270"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="100" id="UU5-Qo-gJK">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Android &amp; iOS mPOS Ready">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="23" name="Arial-BoldMT"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="20" name=".SFNSDisplay"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="Works with popular smartphones and tablets">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="24" name=".SFNSDisplay"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Android &amp; iOS mPOS Ready">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="20" name=".SFNSDisplay"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Works with popular smartphones and tablets">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name=".SFNSDisplay"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="qOr-LU-PNr" userLabel="Fifth Stack View">
+                                        <rect key="frame" x="0.0" y="440" width="325" height="100"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QE5-tI-8di">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="100"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="payment-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZO3-u8-C8M">
+                                                        <rect key="frame" x="-5.5" y="23" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="3G0-9S-npQ">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" constant="60" id="ASX-ty-pSI">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="1zq-yD-t0B"/>
+                                                    <constraint firstAttribute="width" constant="65" id="PEL-pz-oUv">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                                    </constraint>
+                                                    <constraint firstItem="ZO3-u8-C8M" firstAttribute="top" secondItem="QE5-tI-8di" secondAttribute="top" constant="13" id="fuC-Zp-Twi">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="23"/>
+                                                    </constraint>
+                                                    <constraint firstItem="ZO3-u8-C8M" firstAttribute="centerX" secondItem="QE5-tI-8di" secondAttribute="centerX" id="p0z-3y-hB2"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhO-GP-GY3">
+                                                <rect key="frame" x="55" y="0.0" width="270" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="450" id="cko-Ym-Y4Z">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="270"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="100" id="p1H-Bx-jL2"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Accepts All Payment Types">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="23" name="Arial-BoldMT"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" metaFont="system" size="20"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="Credit, pin-based Debit, FSA/HSA, Gift Card, etc.">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="24" name=".SFNSDisplay"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Accepts All Payment Types">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="20"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Credit, Debit, FSA/HSA, Gift Card, etc.">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name=".SFNSDisplay"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94940655733854917" green="0.97338605352603713" blue="0.98002123436665622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cwt-Yf-NPi" firstAttribute="bottom" secondItem="FM4-je-Le8" secondAttribute="bottom" constant="30" id="8vt-rO-ItA">
+                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                            </constraint>
+                            <constraint firstItem="Fue-t8-oKd" firstAttribute="centerX" secondItem="aLp-QT-JFC" secondAttribute="centerX" id="Zuf-KV-d8X"/>
+                            <constraint firstItem="Fue-t8-oKd" firstAttribute="centerY" secondItem="aLp-QT-JFC" secondAttribute="centerY" constant="-60" id="i31-Bc-bMc">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-40"/>
+                            </constraint>
+                            <constraint firstItem="FM4-je-Le8" firstAttribute="centerX" secondItem="aLp-QT-JFC" secondAttribute="centerX" id="pHn-hL-FWQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cwt-Yf-NPi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UT3-wD-Dci"/>
+                    <connections>
+                        <outlet property="fifthView" destination="qOr-LU-PNr" id="iUL-4N-9aq"/>
+                        <outlet property="firstView" destination="y2v-Ko-wq4" id="gN3-gP-Wep"/>
+                        <outlet property="fourthView" destination="qmD-Qb-0QB" id="x9e-vW-5aT"/>
+                        <outlet property="secondView" destination="IfZ-pj-dkr" id="Y7q-5s-sVo"/>
+                        <outlet property="startButton" destination="FM4-je-Le8" id="oTg-RA-bTe"/>
+                        <outlet property="thirdView" destination="BLo-Li-Jhm" id="mcU-K1-1hn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdI-3W-DMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.39062499999999" y="76.427525622254748"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="BridgePay_POS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dF6-Gf-qHo">
+                                <rect key="frame" x="80" y="966" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" title=" "/>
+                                <connections>
+                                    <segue destination="xrL-Kt-qEL" kind="show" id="ZiQ-FN-lWZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sll-7r-uZd">
+                                <rect key="frame" x="169" y="966" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" title=" "/>
+                                <connections>
+                                    <segue destination="wcf-gh-eiT" kind="show" id="mQt-uV-siD"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="3DC-yb-HXK">
+                                <rect key="frame" x="40" y="109" width="295" height="385"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="MLk-ky-3vY">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="385"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLn-wG-35n">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="160"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pf-ty-In6">
+                                                        <rect key="frame" x="0.0" y="5" width="130" height="120"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="OLJ-Jy-k6z">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="130"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" constant="190" id="nIF-Xk-o0l">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" image="sale-icon-dark.png">
+                                                            <color key="titleColor" red="0.1204508046" green="0.63562155929999997" blue="0.80391039460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="salePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wvJ-1P-n8d"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jW-is-Gfn">
+                                                        <rect key="frame" x="48" y="128.5" width="34.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="230" id="Ciz-tP-uc5">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="160"/>
+                                                    </constraint>
+                                                    <constraint firstItem="0Pf-ty-In6" firstAttribute="centerY" secondItem="hLn-wG-35n" secondAttribute="centerY" constant="-15" id="Ujl-U3-xPf"/>
+                                                    <constraint firstItem="2jW-is-Gfn" firstAttribute="centerX" secondItem="hLn-wG-35n" secondAttribute="centerX" id="dn0-4c-XPs"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2jW-is-Gfn" secondAttribute="bottom" id="jWh-Yy-f30">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" constant="200" id="q6p-7u-Imw">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="130"/>
+                                                    </constraint>
+                                                    <constraint firstItem="0Pf-ty-In6" firstAttribute="centerX" secondItem="hLn-wG-35n" secondAttribute="centerX" id="yvx-33-iOh"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEU-EH-3EZ">
+                                                <rect key="frame" x="0.0" y="185" width="130" height="160"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcQ-J3-Y87">
+                                                        <rect key="frame" x="0.0" y="5" width="130" height="120"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="190" id="T0Z-kp-5ya">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="200" id="mga-qZ-uoE">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="130"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" image="void-icon-dark.png">
+                                                            <color key="titleColor" red="0.1204508046" green="0.63562155929999997" blue="0.80391039460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="voidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a1d-7M-q9M"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Void" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVx-lg-mph">
+                                                        <rect key="frame" x="47" y="128.5" width="36" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="6tR-MO-B9B">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="130"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="230" id="Fdz-p2-C47">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="160"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="bottom" secondItem="sVx-lg-mph" secondAttribute="bottom" id="GKx-mL-6Mb">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                                    </constraint>
+                                                    <constraint firstItem="CcQ-J3-Y87" firstAttribute="centerY" secondItem="bEU-EH-3EZ" secondAttribute="centerY" constant="-15" id="Ryz-OR-vE6"/>
+                                                    <constraint firstItem="sVx-lg-mph" firstAttribute="centerX" secondItem="bEU-EH-3EZ" secondAttribute="centerX" id="np9-qR-Qdo"/>
+                                                    <constraint firstItem="CcQ-J3-Y87" firstAttribute="centerX" secondItem="bEU-EH-3EZ" secondAttribute="centerX" id="viy-He-5QS"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vi2-Sw-fn7">
+                                                <rect key="frame" x="0.0" y="370" width="130" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Gyq-Ji-7R0">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <state key="normal" title=" "/>
+                                            </button>
+                                        </subviews>
+                                        <variation key="heightClass=regular-widthClass=compact" spacing="25"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="5ej-jk-C5w">
+                                        <rect key="frame" x="165" y="0.0" width="130" height="385"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8n-m5-rrP">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="160"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogU-eB-ndg">
+                                                        <rect key="frame" x="0.0" y="5" width="130" height="120"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="0Wk-Uv-mVW">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="130"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" constant="190" id="foD-BU-Y4U">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" image="tip-icon-dark.png">
+                                                            <color key="titleColor" red="0.1204508046" green="0.63562155929999997" blue="0.80391039460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="tipPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yh5-Py-aw0"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Adjust" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd6-rI-Ixy">
+                                                        <rect key="frame" x="25" y="128.5" width="81" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ogU-eB-ndg" firstAttribute="centerY" secondItem="E8n-m5-rrP" secondAttribute="centerY" constant="-15" id="KB3-BH-IFf"/>
+                                                    <constraint firstItem="Yd6-rI-Ixy" firstAttribute="centerX" secondItem="E8n-m5-rrP" secondAttribute="centerX" id="ZRy-EF-Dmc"/>
+                                                    <constraint firstAttribute="width" constant="200" id="bVg-Dc-oYX">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="130"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="bottom" secondItem="Yd6-rI-Ixy" secondAttribute="bottom" id="inz-X2-OH3">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                                    </constraint>
+                                                    <constraint firstItem="ogU-eB-ndg" firstAttribute="centerX" secondItem="E8n-m5-rrP" secondAttribute="centerX" id="mHL-Or-Oub"/>
+                                                    <constraint firstAttribute="height" constant="230" id="vHh-6w-XPN">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="160"/>
+                                                    </constraint>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZn-eI-cu7">
+                                                <rect key="frame" x="0.0" y="185" width="130" height="160"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svh-dc-n7g">
+                                                        <rect key="frame" x="0.0" y="5" width="130" height="120"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="190" id="CCi-n9-xUI">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="200" id="DSI-4d-hFG">
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="130"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" image="refund-icon-dark.png">
+                                                            <color key="titleColor" red="0.1204508046" green="0.63562155929999997" blue="0.80391039460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="refundPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0FR-Ac-lmL"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refund" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rl-b4-ic0">
+                                                        <rect key="frame" x="36.5" y="128.5" width="58" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="0.10588235294117647" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="4rl-b4-ic0" firstAttribute="centerX" secondItem="BZn-eI-cu7" secondAttribute="centerX" id="Be3-HZ-nWD"/>
+                                                    <constraint firstAttribute="width" constant="200" id="dIp-NX-ZGh">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="130"/>
+                                                    </constraint>
+                                                    <constraint firstItem="Svh-dc-n7g" firstAttribute="centerY" secondItem="BZn-eI-cu7" secondAttribute="centerY" constant="-15" id="esM-59-5lY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4rl-b4-ic0" secondAttribute="bottom" id="iQ4-Gh-HRO">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                                    </constraint>
+                                                    <constraint firstItem="Svh-dc-n7g" firstAttribute="centerX" secondItem="BZn-eI-cu7" secondAttribute="centerX" id="uRa-3a-2XE"/>
+                                                    <constraint firstAttribute="height" constant="230" id="xFp-GR-ODs">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="160"/>
+                                                    </constraint>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxb-XP-LWd">
+                                                <rect key="frame" x="0.0" y="370" width="130" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="s2b-Bq-OlA">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <state key="normal" title=" "/>
+                                            </button>
+                                        </subviews>
+                                        <variation key="heightClass=regular-widthClass=compact" spacing="25"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MLk-ky-3vY" firstAttribute="centerY" secondItem="3DC-yb-HXK" secondAttribute="centerY" id="Jhb-l7-au4"/>
+                                    <constraint firstItem="5ej-jk-C5w" firstAttribute="centerY" secondItem="3DC-yb-HXK" secondAttribute="centerY" id="MvU-rl-37Z"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=compact" spacing="35"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKk-N8-Rnn">
+                                <rect key="frame" x="702" y="931" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.94869023561477661" green="0.97321575880050659" blue="0.97944492101669312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="a2r-sE-ao7" kind="show" id="ddG-PF-QAJ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryg-K6-Gkq">
+                                <rect key="frame" x="27.5" y="553" width="320" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logos.png" translatesAutoresizingMaskIntoConstraints="NO" id="dcm-Z0-a2P">
+                                        <rect key="frame" x="102.5" y="9" width="220" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="290" id="pQF-z3-fMd">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="220"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="40" id="xQa-U6-mwd">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIS-sS-AzX">
+                                        <rect key="frame" x="0.0" y="15" width="95.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.27334082126617432" green="0.47937601804733276" blue="0.60637205839157104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dcm-Z0-a2P" firstAttribute="centerY" secondItem="ryg-K6-Gkq" secondAttribute="centerY" constant="-2" id="Lwf-pZ-0r3">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="-1"/>
+                                    </constraint>
+                                    <constraint firstItem="OIS-sS-AzX" firstAttribute="centerY" secondItem="ryg-K6-Gkq" secondAttribute="centerY" id="N4C-SR-8ZS"/>
+                                    <constraint firstAttribute="width" constant="415" id="O5C-kb-T6G">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="320"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="RIj-s0-Tmw"/>
+                                    <constraint firstItem="dcm-Z0-a2P" firstAttribute="leading" secondItem="OIS-sS-AzX" secondAttribute="trailing" constant="7" id="g5a-2U-rpu"/>
+                                    <constraint firstItem="OIS-sS-AzX" firstAttribute="leading" secondItem="ryg-K6-Gkq" secondAttribute="leading" id="ziV-nY-VUj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94940655730000001" green="0.97338605349999996" blue="0.9800212344" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ryg-K6-Gkq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3oO-ww-L5W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ryg-K6-Gkq" secondAttribute="bottom" id="4FD-l4-isP"/>
+                            <constraint firstItem="3DC-yb-HXK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JpU-cW-JSd"/>
+                            <constraint firstItem="3DC-yb-HXK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PLQ-f4-Em4"/>
+                            <constraint firstItem="ryg-K6-Gkq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aB6-F8-5Y5"/>
+                            <constraint firstItem="ryg-K6-Gkq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qkh-Qc-BH2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N1d-nd-ms6"/>
+                    <connections>
+                        <outlet property="infoButton" destination="eKk-N8-Rnn" id="wSQ-vB-TsT"/>
+                        <outlet property="saleButton" destination="dF6-Gf-qHo" id="rDa-Rv-roH"/>
+                        <outlet property="voidButton" destination="Sll-7r-uZd" id="fax-jI-NNX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876.81159420289862" y="76.630434782608702"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Y1K-WC-NHl">
+            <objects>
+                <viewController id="a2r-sE-ao7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="68w-NR-jCh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobelisk-logo-dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="vx6-KS-13S">
+                                <rect key="frame" x="-11.5" y="297.5" width="398" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="398" id="3yO-Up-jhO"/>
+                                    <constraint firstAttribute="height" constant="108" id="GIW-Ia-8kl"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bridgepay-logo-dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="j5u-5O-B3M">
+                                <rect key="frame" x="27.5" y="139" width="320" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="BkX-O7-OXf"/>
+                                    <constraint firstAttribute="width" constant="320" id="LcZ-Wd-suj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.bridgepaynetwork.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOK-ev-mdV">
+                                <rect key="frame" x="12.5" y="196.5" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AUG-U0-Shq"/>
+                                    <constraint firstAttribute="width" constant="350" id="rKm-Em-EZ6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.26007792353630066" green="0.43567168712615967" blue="0.56479763984680176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.mobelisktech.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDl-4T-dBo">
+                                <rect key="frame" x="12.5" y="386.5" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="nEr-KG-0FY"/>
+                                    <constraint firstAttribute="height" constant="50" id="tbF-Us-Fsc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.28205955028533936" green="0.48332446813583374" blue="0.60636967420578003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94869023561477661" green="0.97321575880050659" blue="0.97944492101669312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vx6-KS-13S" firstAttribute="centerX" secondItem="68w-NR-jCh" secondAttribute="centerX" id="9K1-e7-ZVa"/>
+                            <constraint firstItem="j5u-5O-B3M" firstAttribute="centerX" secondItem="68w-NR-jCh" secondAttribute="centerX" id="KV9-XP-SN6"/>
+                            <constraint firstItem="VDl-4T-dBo" firstAttribute="centerX" secondItem="68w-NR-jCh" secondAttribute="centerX" id="Mw2-c8-8zh"/>
+                            <constraint firstItem="j5u-5O-B3M" firstAttribute="centerY" secondItem="68w-NR-jCh" secondAttribute="centerY" constant="-130" id="NW9-eV-Chh"/>
+                            <constraint firstItem="VDl-4T-dBo" firstAttribute="centerY" secondItem="68w-NR-jCh" secondAttribute="centerY" constant="110" id="SEE-7E-R4S"/>
+                            <constraint firstItem="HOK-ev-mdV" firstAttribute="centerY" secondItem="68w-NR-jCh" secondAttribute="centerY" constant="-80" id="YbZ-93-Zcu"/>
+                            <constraint firstItem="HOK-ev-mdV" firstAttribute="centerX" secondItem="68w-NR-jCh" secondAttribute="centerX" id="Ye6-XY-avo"/>
+                            <constraint firstItem="vx6-KS-13S" firstAttribute="centerY" secondItem="68w-NR-jCh" secondAttribute="centerY" constant="50" id="ldw-Ss-KP4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ia0-YD-6U6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Asa-Uc-qrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1595.3125" y="78.515625"/>
+        </scene>
+        <!--Sale-->
+        <scene sceneID="Fbd-xf-Eh7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Actions" referencedIdentifier="Sale" id="xrL-Kt-qEL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kc5-bh-ty5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="536"/>
+        </scene>
+        <!--Void-->
+        <scene sceneID="JBU-oA-sVy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Actions" referencedIdentifier="Void" id="wcf-gh-eiT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHl-5u-KBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="536"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eTQ-qX-dPD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uog-XR-1f8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Vda-Du-JA6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.10980392156862745" green="0.59607843137254901" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2ph-sq-2Gt" kind="relationship" relationship="rootViewController" id="iIV-YQ-QIq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Zc-8A-y9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-619.20000000000005" y="79.160419790104953"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="block-icon-o.png" width="300" height="300"/>
+        <image name="bridgepay-logo-dark.png" width="509" height="111"/>
+        <image name="cert-icon-o.png" width="300" height="300"/>
+        <image name="cross-platform-icon.png" width="300" height="300"/>
+        <image name="flow-icon-o.png" width="300" height="300"/>
+        <image name="logos.png" width="592" height="84"/>
+        <image name="mobelisk-logo-dark.png" width="537" height="156"/>
+        <image name="payment-icon.png" width="300" height="300"/>
+        <image name="refund-icon-dark.png" width="300" height="300"/>
+        <image name="sale-icon-dark.png" width="300" height="300"/>
+        <image name="tip-icon-dark.png" width="300" height="300"/>
+        <image name="void-icon-dark.png" width="300" height="300"/>
+    </resources>
+</document>
