@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import <PayGuardian_SDK/PayGuardian_SDK.h>
 #import <IDTech/IDTech.h>
+#import <PayGuardian_SDK/PayGuardian_SDK.h>

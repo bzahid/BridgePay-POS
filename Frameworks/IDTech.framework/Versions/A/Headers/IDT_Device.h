@@ -195,18 +195,16 @@
     id<IDT_Device_Delegate> delegate2;
     id<IDT_Device_Delegate> bypassDelegate;
 }
-
 @property (nonatomic, strong) CBCentralManager *centralManager;
 @property (nonatomic, strong) CBPeripheral *bleDevice;
 #endif
 
 #endif
 
-
+;
 @property(strong) id<IDT_Device_Delegate> delegate;  //!<- Reference to IDT_Device_Delegate.
 @property(strong) id<IDT_Device_Delegate> delegate2;  //!<- Reference to IDT_Device_Delegate.
 @property(strong) id<IDT_Device_Delegate> bypassDelegate;  //!<- Reference to IDT_Device_Delegate.
-
 
 
 
@@ -348,6 +346,14 @@
  */
 -(NSString*) getBLEFriendlyName;
 
+
+/**
+ * Disconnect from BLE -
+ *
+ * Will disconnect from existing BLE connection. You can now set another BLE Friendly Name to attach to another device.
+ *
+ */
+-(void) device_disconnectBLE;
 
 /**
  * Set BLE Friendly Name
@@ -5755,5 +5761,100 @@ Returns the connection status of the requested device
 -(RETURN_CODE) device_cancelTransaction;
 
 
+
+/**
+ * FeliCa Authentication
+ *
+ Provides a key to be used in a follow up FeliCa Read with MAC (3 blocks max) or Write with MAC (1 block max).
+ This command must be executed before each Read w/MAC or Write w/MAC command
+ 
+ NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param key 16 byte key used for MAC generation of Read or Write with MAC
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_authentication:(NSData*)key;
+
+
+
+/**
+ * FeliCa Read with MAC Generation
+ *
+ Reads up to 3 blocks with MAC Generation.  FeliCa Authentication must be performed first
+ 
+ NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param numBlocks Number of blocks
+ @param blockList Block to read. Each block in blockList   Maximum 3 block requests
+ @param blocks  Blocks read.  Each block 16 bytes.
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_readWithMac:(int)numBlocks blockList:(NSData*)blockList blocks:(NSData**)blocks;
+
+
+/**
+ * FeliCa Write with MAC Generation
+ *
+ Writes a block with MAC Generation.  FeliCa Authentication must be performed first
+ 
+ NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param blockNumber Number of block
+ @param data  Block to write.  Must be 16 bytes.
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_writeWithMac:(int)blockNumber data:(NSData*)data;
+
+
+/**
+ * FeliCa Read
+ *
+ Reads up to 4 blocks.
+ 
+ NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param serviceCode Service Code List. Each service code in Service Code List = 2 bytes of data
+ @param numBlocks Number of blocks
+ @param blockList Blocks to read. Maximum 4 block requests
+ @param blocks  Blocks read.  Each block 16 bytes.
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_read:(NSData*)serviceCode numBlocks:(int)numBlocks blockList:(NSData*)blockList blocks:(NSData**)blocks;
+
+
+/**
+ * FeliCa Write
+ *
+ Writes a block
+ 
+ NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param serviceCode Service Code list.  Each service code must be be 2 bytes
+ @param blockList Block list.
+ @param data  Block to write.  Must be 16 bytes.
+ @param statusFlag  Status flag response as explained in FeliCA Lite-S User's Manual, Section 4.5
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_write:(NSData*)serviceCode  blockList:(NSData*)blockList data:(NSData*)data statusFlag:(NSData**)statusFlag;
+
+
+/**
+ * FeliCa NFC Commands
+ *
+ Perform functions a Felica Card
+ 
+ NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param request Request as explained in IDTech NEO IDG Guide
+ @param response  Response as explained in FeliCA Lite-S User's Manual
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_nfcCommand:(NSData*)request response:(NSData**)response;
 
 @end

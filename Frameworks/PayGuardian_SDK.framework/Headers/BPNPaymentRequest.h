@@ -71,6 +71,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic, nullable, readonly) BPNHealthCare *healthCareData;
 
+@property (strong, nonatomic, nullable) NSString *something;
+
 - (instancetype)init __unavailable;
 // clang-format off
 + (instancetype)new __unavailable;

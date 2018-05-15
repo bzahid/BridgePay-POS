@@ -10,12 +10,11 @@
 		0D0DFF59202A973700AE7D8D /* block-icon-o.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D0DFF56202A973600AE7D8D /* block-icon-o.png */; };
 		0D0DFF5A202A973700AE7D8D /* cert-icon-o.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D0DFF57202A973600AE7D8D /* cert-icon-o.png */; };
 		0D0DFF5B202A973700AE7D8D /* flow-icon-o.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D0DFF58202A973700AE7D8D /* flow-icon-o.png */; };
-		0D1214212030800400993A34 /* IDTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1214202030800300993A34 /* IDTech.framework */; };
 		0D13E0862035D5BB00F9498A /* logos.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D13E0832035D5BA00F9498A /* logos.png */; };
 		0D13E0882035D91900F9498A /* logos-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D13E0872035D91800F9498A /* logos-light.png */; };
-		0D147669202E5F9E003AEF43 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147668202E5F9E003AEF43 /* libxml2.tbd */; };
-		0D14766B202E5FCA003AEF43 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D14766A202E5FCA003AEF43 /* libstdc++.tbd */; };
+		0D147676202E6156003AEF43 /* Ono.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147673202E6156003AEF43 /* Ono.framework */; };
 		0D147679202E623C003AEF43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147678202E623B003AEF43 /* UIKit.framework */; };
+		0D157D6B203DE5A900CD4303 /* Ono.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147673202E6156003AEF43 /* Ono.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0D184AF22033535C009A6B6B /* payguardian-logo-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D184AEF2033535C009A6B6B /* payguardian-logo-light.png */; };
 		0D184AF420335464009A6B6B /* bridgepay-logo-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D184AF320335464009A6B6B /* bridgepay-logo-light.png */; };
 		0D184AF620338092009A6B6B /* bridgepay-logo-dark-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D184AF520338091009A6B6B /* bridgepay-logo-dark-small.png */; };
@@ -28,12 +27,24 @@
 		0D1B55612034AA2E00634922 /* mobelisk-logo-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1B555E2034AA2E00634922 /* mobelisk-logo-light.png */; };
 		0D1B556820351E2000634922 /* cross-platform-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1B556420351E1E00634922 /* cross-platform-icon.png */; };
 		0D1B556920351E2000634922 /* payment-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1B556720351E1F00634922 /* payment-icon.png */; };
-		0D20E8C32041BAA300600390 /* Ono.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147673202E6156003AEF43 /* Ono.framework */; };
-		0D20E8C42041BAA300600390 /* Ono.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147673202E6156003AEF43 /* Ono.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D237FFA20AA257600C89852 /* Mobelisk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D237FF920AA257600C89852 /* Mobelisk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D237FFB20AA258E00C89852 /* Mobelisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D237FF920AA257600C89852 /* Mobelisk.framework */; };
+		0D237FFE20AA25A000C89852 /* IDTech.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D237FFC20AA259F00C89852 /* IDTech.bundle */; };
+		0D237FFF20AA25A000C89852 /* IDTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D237FFD20AA25A000C89852 /* IDTech.framework */; };
 		0D2B506C2027A08300F5B873 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2B506B2027A08300F5B873 /* ReceiptViewController.swift */; };
+		0D432450208E79D50014267B /* TransactionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D43244F208E79D50014267B /* TransactionHandler.swift */; };
+		0D588256207F9B49006414E8 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147668202E5F9E003AEF43 /* libxml2.tbd */; };
+		0D588259207F9B4F006414E8 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D14766A202E5FCA003AEF43 /* libstdc++.tbd */; };
+		0D58825A207F9B73006414E8 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D14764E202E5E77003AEF43 /* CoreAudioKit.framework */; };
+		0D58825B207F9B7C006414E8 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147658202E5EF9003AEF43 /* CoreAudio.framework */; };
+		0D58825C207F9B87006414E8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147662202E5F7A003AEF43 /* AudioToolbox.framework */; };
+		0D58825D207F9B95006414E8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D14765E202E5F5C003AEF43 /* MessageUI.framework */; };
+		0D58825E207F9BA9006414E8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147664202E5F8D003AEF43 /* CoreTelephony.framework */; };
+		0D58825F207F9BAF006414E8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147666202E5F95003AEF43 /* CoreBluetooth.framework */; };
+		0D588260207F9BBE006414E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147654202E5EC2003AEF43 /* CoreGraphics.framework */; };
+		0D6430FB20AB21AA006B8076 /* PayGuardian_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D588253207F99E0006414E8 /* PayGuardian_SDK.framework */; };
 		0DDE07EE203083FB00B00C44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D14765A202E5EFF003AEF43 /* Foundation.framework */; };
 		0DDE07F62030B7D100B00C44 /* RBA_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147672202E6156003AEF43 /* RBA_SDK.framework */; };
-		0DDF749E2040A8DD004AC68F /* PayGuardian_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDF749D2040A8DC004AC68F /* PayGuardian_SDK.framework */; };
 		0DF525FA202B52C000FEA910 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF525F9202B52C000FEA910 /* IntroViewController.swift */; };
 		0DF6888D2027C1A300CAF2AD /* void-icon-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DF688852027C1A300CAF2AD /* void-icon-dark.png */; };
 		0DF6888E2027C1A300CAF2AD /* tip-icon-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DF688862027C1A300CAF2AD /* tip-icon-light.png */; };
@@ -43,6 +54,10 @@
 		0DF688922027C1A300CAF2AD /* sale-icon-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DF6888A2027C1A300CAF2AD /* sale-icon-light.png */; };
 		0DF688932027C1A300CAF2AD /* void-icon-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DF6888B2027C1A300CAF2AD /* void-icon-light.png */; };
 		0DF688942027C1A300CAF2AD /* refund-icon-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DF6888C2027C1A300CAF2AD /* refund-icon-light.png */; };
+		0DF9833A206D3D92000E39C1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147650202E5E83003AEF43 /* CFNetwork.framework */; };
+		0DF9833B206D3D9B000E39C1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D14765C202E5F15003AEF43 /* AVFoundation.framework */; };
+		0DF9833C206D3DA0000E39C1 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147660202E5F62003AEF43 /* MediaPlayer.framework */; };
+		0DF9833D206D3DA9000E39C1 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D147656202E5EEA003AEF43 /* ExternalAccessory.framework */; };
 		0DFEA5002026E88B00DF5182 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEA4FF2026E88B00DF5182 /* AppDelegate.swift */; };
 		0DFEA5022026E88B00DF5182 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFEA5012026E88B00DF5182 /* ViewController.swift */; };
 		0DFEA5052026E88B00DF5182 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DFEA5032026E88B00DF5182 /* Main.storyboard */; };
@@ -55,13 +70,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0D20E8C52041BAA300600390 /* Embed Frameworks */ = {
+		0D121424203082F500993A34 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0D20E8C42041BAA300600390 /* Ono.framework in Embed Frameworks */,
+				0D237FFA20AA257600C89852 /* Mobelisk.framework in Embed Frameworks */,
+				0D157D6B203DE5A900CD4303 /* Ono.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,10 +85,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07F622662043053B0090AF98 /* BridgePay POS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BridgePay POS.entitlements"; sourceTree = "<group>"; };
 		0D0DFF56202A973600AE7D8D /* block-icon-o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "block-icon-o.png"; sourceTree = "<group>"; };
 		0D0DFF57202A973600AE7D8D /* cert-icon-o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cert-icon-o.png"; sourceTree = "<group>"; };
 		0D0DFF58202A973700AE7D8D /* flow-icon-o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flow-icon-o.png"; sourceTree = "<group>"; };
-		0D1214202030800300993A34 /* IDTech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IDTech.framework; sourceTree = "<group>"; };
 		0D13E0832035D5BA00F9498A /* logos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logos.png; sourceTree = "<group>"; };
 		0D13E0872035D91800F9498A /* logos-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logos-light.png"; sourceTree = "<group>"; };
 		0D14764E202E5E77003AEF43 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
@@ -105,9 +121,13 @@
 		0D1B555E2034AA2E00634922 /* mobelisk-logo-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mobelisk-logo-light.png"; sourceTree = "<group>"; };
 		0D1B556420351E1E00634922 /* cross-platform-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross-platform-icon.png"; sourceTree = "<group>"; };
 		0D1B556720351E1F00634922 /* payment-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "payment-icon.png"; sourceTree = "<group>"; };
+		0D237FF920AA257600C89852 /* Mobelisk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mobelisk.framework; path = Frameworks/Mobelisk.framework; sourceTree = "<group>"; };
+		0D237FFC20AA259F00C89852 /* IDTech.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IDTech.bundle; sourceTree = "<group>"; };
+		0D237FFD20AA25A000C89852 /* IDTech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IDTech.framework; sourceTree = "<group>"; };
 		0D2B506B2027A08300F5B873 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
+		0D43244F208E79D50014267B /* TransactionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHandler.swift; sourceTree = "<group>"; };
+		0D588253207F99E0006414E8 /* PayGuardian_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayGuardian_SDK.framework; sourceTree = "<group>"; };
 		0DDE07EF2030873B00B00C44 /* BridgePay POS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BridgePay POS-Bridging-Header.h"; sourceTree = "<group>"; };
-		0DDF749D2040A8DC004AC68F /* PayGuardian_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayGuardian_SDK.framework; sourceTree = "<group>"; };
 		0DF525F9202B52C000FEA910 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		0DF688852027C1A300CAF2AD /* void-icon-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "void-icon-dark.png"; sourceTree = "<group>"; };
 		0DF688862027C1A300CAF2AD /* tip-icon-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tip-icon-light.png"; sourceTree = "<group>"; };
@@ -117,6 +137,7 @@
 		0DF6888A2027C1A300CAF2AD /* sale-icon-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sale-icon-light.png"; sourceTree = "<group>"; };
 		0DF6888B2027C1A300CAF2AD /* void-icon-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "void-icon-light.png"; sourceTree = "<group>"; };
 		0DF6888C2027C1A300CAF2AD /* refund-icon-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refund-icon-light.png"; sourceTree = "<group>"; };
+		0DF98338206D3D55000E39C1 /* Pods_mobeliskDemo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pods_mobeliskDemo.framework; sourceTree = "<group>"; };
 		0DFEA4FC2026E88B00DF5182 /* BridgePay POS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BridgePay POS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFEA4FF2026E88B00DF5182 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DFEA5012026E88B00DF5182 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,14 +156,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D237FFE20AA25A000C89852 /* IDTech.bundle in Frameworks */,
+				0D237FFF20AA25A000C89852 /* IDTech.framework in Frameworks */,
+				0D588260207F9BBE006414E8 /* CoreGraphics.framework in Frameworks */,
+				0D58825F207F9BAF006414E8 /* CoreBluetooth.framework in Frameworks */,
+				0D58825E207F9BA9006414E8 /* CoreTelephony.framework in Frameworks */,
+				0DF9833D206D3DA9000E39C1 /* ExternalAccessory.framework in Frameworks */,
+				0DF9833B206D3D9B000E39C1 /* AVFoundation.framework in Frameworks */,
+				0D58825D207F9B95006414E8 /* MessageUI.framework in Frameworks */,
+				0DF9833C206D3DA0000E39C1 /* MediaPlayer.framework in Frameworks */,
+				0D58825C207F9B87006414E8 /* AudioToolbox.framework in Frameworks */,
+				0D6430FB20AB21AA006B8076 /* PayGuardian_SDK.framework in Frameworks */,
+				0D58825B207F9B7C006414E8 /* CoreAudio.framework in Frameworks */,
+				0D58825A207F9B73006414E8 /* CoreAudioKit.framework in Frameworks */,
+				0D588259207F9B4F006414E8 /* libstdc++.tbd in Frameworks */,
+				0D588256207F9B49006414E8 /* libxml2.tbd in Frameworks */,
+				0DF9833A206D3D92000E39C1 /* CFNetwork.framework in Frameworks */,
 				0DDE07F62030B7D100B00C44 /* RBA_SDK.framework in Frameworks */,
 				0DDE07EE203083FB00B00C44 /* Foundation.framework in Frameworks */,
-				0D1214212030800400993A34 /* IDTech.framework in Frameworks */,
-				0DDF749E2040A8DD004AC68F /* PayGuardian_SDK.framework in Frameworks */,
 				0D147679202E623C003AEF43 /* UIKit.framework in Frameworks */,
-				0D20E8C32041BAA300600390 /* Ono.framework in Frameworks */,
-				0D14766B202E5FCA003AEF43 /* libstdc++.tbd in Frameworks */,
-				0D147669202E5F9E003AEF43 /* libxml2.tbd in Frameworks */,
+				0D147676202E6156003AEF43 /* Ono.framework in Frameworks */,
+				0D237FFB20AA258E00C89852 /* Mobelisk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,8 +186,10 @@
 		0D14764D202E45C0003AEF43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0DDF749D2040A8DC004AC68F /* PayGuardian_SDK.framework */,
-				0D1214202030800300993A34 /* IDTech.framework */,
+				0D237FFC20AA259F00C89852 /* IDTech.bundle */,
+				0D237FFD20AA25A000C89852 /* IDTech.framework */,
+				0D588253207F99E0006414E8 /* PayGuardian_SDK.framework */,
+				0DF98338206D3D55000E39C1 /* Pods_mobeliskDemo.framework */,
 				0D147678202E623B003AEF43 /* UIKit.framework */,
 				0D147673202E6156003AEF43 /* Ono.framework */,
 				0D147672202E6156003AEF43 /* RBA_SDK.framework */,
@@ -179,6 +215,7 @@
 		0DFEA4F32026E88B00DF5182 = {
 			isa = PBXGroup;
 			children = (
+				0D237FF920AA257600C89852 /* Mobelisk.framework */,
 				0D14764D202E45C0003AEF43 /* Frameworks */,
 				0DFEA4FE2026E88B00DF5182 /* BridgePay POS */,
 				0DFEA4FD2026E88B00DF5182 /* Products */,
@@ -196,9 +233,11 @@
 		0DFEA4FE2026E88B00DF5182 /* BridgePay POS */ = {
 			isa = PBXGroup;
 			children = (
+				07F622662043053B0090AF98 /* BridgePay POS.entitlements */,
 				0DFEA5112026E90800DF5182 /* Images */,
 				0DFEA4FF2026E88B00DF5182 /* AppDelegate.swift */,
 				0DFEA519202785CB00DF5182 /* CustomNav.swift */,
+				0D43244F208E79D50014267B /* TransactionHandler.swift */,
 				0DF525F9202B52C000FEA910 /* IntroViewController.swift */,
 				0DFEA5012026E88B00DF5182 /* ViewController.swift */,
 				0D2B506B2027A08300F5B873 /* ReceiptViewController.swift */,
@@ -256,7 +295,7 @@
 				0DFEA4F82026E88B00DF5182 /* Sources */,
 				0DFEA4F92026E88B00DF5182 /* Frameworks */,
 				0DFEA4FA2026E88B00DF5182 /* Resources */,
-				0D20E8C52041BAA300600390 /* Embed Frameworks */,
+				0D121424203082F500993A34 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,12 +313,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "BridgePay Network Solutions";
 				TargetAttributes = {
 					0DFEA4FB2026E88B00DF5182 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -352,6 +402,7 @@
 				0D2B506C2027A08300F5B873 /* ReceiptViewController.swift in Sources */,
 				0DFEA5002026E88B00DF5182 /* AppDelegate.swift in Sources */,
 				0DFEA51C2027882300DF5182 /* Transaction.swift in Sources */,
+				0D432450208E79D50014267B /* TransactionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -399,6 +451,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -406,6 +459,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -437,6 +491,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -446,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -456,6 +512,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -463,6 +520,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -487,6 +545,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -495,7 +554,9 @@
 		0DFEA50F2026E88B00DF5182 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "BridgePay POS/BridgePay POS.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9M9THEFZRQ;
@@ -503,14 +564,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "BridgePay POS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bpn.PayGuardian;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobelisk.mposdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = NO;
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/BridgePay POS-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -520,7 +584,9 @@
 		0DFEA5102026E88B00DF5182 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "BridgePay POS/BridgePay POS.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9M9THEFZRQ;
@@ -528,14 +594,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "BridgePay POS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bpn.PayGuardian;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobelisk.mposdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = NO;
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)/BridgePay POS-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

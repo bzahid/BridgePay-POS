@@ -58,6 +58,20 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "TransactionHandler.emvTransactionData(_:errorCode:):TransactionHandler.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.idt.device_getResponseCodeString(Int32(ret.rawValue));">
+            </PersistentString>
+            <PersistentString
+               value = "self.onComplete">
+            </PersistentString>
+            <PersistentString
+               value = "self.onStateChange">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "SubViewController.amountFieldChanged(_:):SubViewController.swift">
          <PersistentStrings>
             <PersistentString

@@ -113,6 +113,19 @@ class SubViewController: CustomNav, UITextFieldDelegate {
         self.view.endEditing(true);
     }
     
+    @IBAction func enableCtls(_ sender: Any) {
+        if (Transaction.isSale()) {
+            let alert = UIAlertController(title: "Use Contactless?", message: "Use Contactless/Magstripe?", preferredStyle: .alert);
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                Transaction.disableEmv = true;
+            }))
+            alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
+                Transaction.disableEmv = false;
+            }))
+            self.present(alert, animated: true, completion: nil);
+        }
+    }
+    
     @IBAction func amountFieldChanged(_ sender: Any) {
         if(sender is UITextField) {
             let textField = sender as? UITextField;

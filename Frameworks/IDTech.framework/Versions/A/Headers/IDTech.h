@@ -11,6 +11,6 @@
 #import <IDTech/IDTUtility.h>
 #import <IDTech/APDUResponse.h>
 #import <iDTech/IDT_VP3300.h>
-#import <iDTech/IDT_VP3600.h>
+#import <iDTech/IDT_NEO2.h>
 #import <iDTech/IDT_UniPayI_V.h>
 #import <iDTech/uniMag.h>

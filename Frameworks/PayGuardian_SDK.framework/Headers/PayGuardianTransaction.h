@@ -5,8 +5,9 @@
 @class BPNPayment;
 @class BPNPaymentRequest;
 @class uniMag;
+@class IDTEMVData;
 
-@protocol IDT_VP4880_Delegate;
+@protocol IDT_VP3300_Delegate;
 @protocol BarcodeScannerDelegate;
 
 @interface PayGuardianTransaction : NSObject
@@ -32,11 +33,20 @@
 
 - (void) testMagtek;
 
-- (void)cancel;
+- (void) cancel;
 
-- (void) assignBypassDelegate:(id<IDT_VP4880_Delegate>) delegate;
+- (void) assignBypassDelegate:(id<IDT_VP3300_Delegate>) delegate;
 
 - (void) processBypassResponse:(NSData*) data;
+
+- (void) VP3300sendTransactionData:(IDTEMVData*) emvData
+                         errorCode:(int)error
+                      onCompletion:(void (^)(BPNPayment *payment, NSError *error))onCompletion
+                    onStateChanged:(void (^)(PayGuardianTransactionState state))onStateChanged;
+
+- (void) VP3300setOnTransactionComplete:(void (^)(NSString *result))onComplete;
+
+- (void) VP3300completeTransaction:(NSString*) errorResponse;
 
 @property (nonatomic, assign) BOOL retryOnBadRead;
 

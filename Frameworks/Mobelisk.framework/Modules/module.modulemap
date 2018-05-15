@@ -1,0 +1,11 @@
+framework module Mobelisk {
+  umbrella header "Mobelisk.h"
+
+  export *
+  module * { export * }
+}
+
+module Mobelisk.Swift {
+    header "Mobelisk-Swift.h"
+    requires objc
+}

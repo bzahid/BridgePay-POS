@@ -8,8 +8,10 @@
 
 import Foundation
 import UIKit
+import Mobelisk
+import PayGuardian_SDK
 
-class Transaction {
+class Transaction: NSObject {
     
     static var t_amount = "0.00";
     static var t_transType = TRANSACTION_TYPE_SALE;
@@ -23,6 +25,10 @@ class Transaction {
     static var t_aid = "5789235";
     static var t_id = "24749";
     static var count = 1234;
+    static var alert:UIAlertController?
+    static var svc:SubViewController?
+    static var onCompleteFunc:(() -> Void)?
+    static var disableEmv = true;
     
     class func setAmount(amount: String) {
         t_amount = amount;
@@ -136,7 +142,10 @@ class Transaction {
     class func processPayment(vc: SubViewController, onComplete:@escaping (() -> Void)) {
     
         let terminal = TerminalCommConfig();
-        terminal.terminalType = TERMINAL_TYPE_IDTECH_UNIPAYIII;
+        terminal.terminalType = TERMINAL_TYPE_IDTECH_VIVOPAY;
+        
+        svc = vc;
+        onCompleteFunc = onComplete;
         
         if(isSale()) {
             t_originalAmount = t_amount;
@@ -144,39 +153,20 @@ class Transaction {
             
             let request = BPNPaymentRequest(invoiceNumber: String(count), pnRefNum: nil, amount: NSDecimalNumber(string: t_amount), tipAmount: nil, cashBackAmount: nil,
                                             tenderType: TENDER_TYPE_CREDIT, transactionType: t_transType, username: "mglpgtest", password: "57!sE@3Fm",
-                                            merchantCode: "611000", merchantAccountCode: "611001", paymentAccountNumber: "373953244361001", token: nil, expirationDate: "1220",
-                                            //merchantCode: "611000", merchantAccountCode: "611001", paymentAccountNumber: nil, token: nil, expirationDate: nil,
-                                            terminalCommConfig: terminal, industryType: TRANSACTION_INDUSTRY_TYPE_RETAIL, healthCareData: nil, disableEmv: false,
+                                            merchantCode: "611000", merchantAccountCode: "611002", paymentAccountNumber: nil, token: nil, expirationDate: nil,
+                                            terminalCommConfig: terminal, industryType: TRANSACTION_INDUSTRY_TYPE_RETAIL, healthCareData: nil, disableEmv: disableEmv,
                                             disableAmountConfirmation: true, testMode: true);
             
             count += 1;
-            let transaction = PayGuardianTransaction(paymentRequest: request);
-            
-            //transaction?.processBypassResponse(data: data);
-            //transaction?.assignBypassDelegate(delegate: delegate);
+            TransactionHandler.getInstance().readCard(payment: request);
             
             var message = "Please swipe or insert card";
             if (request.disableEmv) {
                 message = "Please swipe card";
             }
-            let alert = UIAlertController(title: "Ready", message: message, preferredStyle: .alert);
             
-            transaction?.run(onCompletion: { (payment, error) in
-                alert.dismiss(animated: true, completion: nil);
-                completeTransaction(payment: payment, onComplete: onComplete);
-                
-            }, onStateChanged: { (state) in
-                if (state == PayGuardianTransactionState.waitingForCard) {
-                    vc.present(alert, animated: true);
-                } else if (state == PayGuardianTransactionState.cardReadWithError) {
-                    alert.dismiss(animated: true, completion: nil);
-                    completeTransaction(payment: nil, onComplete: onComplete);
-                } else {
-                    if (state == PayGuardianTransactionState.readingCard) {
-                        alert.message = "Processing, please wait...";
-                    }
-                }
-            })
+            alert = UIAlertController(title: "Ready", message: message, preferredStyle: .alert);
+            svc?.present(alert!, animated: true);
             
         } else {
             
@@ -187,7 +177,7 @@ class Transaction {
                 amt = NSDecimalNumber(string:t_amount);
             }
             
-            let request = BPNPaymentRequest(invoiceNumber: String(count - 1), pnRefNum: t_pnRef, amount: amt, tipAmount: NSDecimalNumber(string: t_amount), cashBackAmount: nil, tenderType: TENDER_TYPE_CREDIT, transactionType: t_transType, username: "mglpgtest", password: "57!sE@3Fm", merchantCode: "611000", merchantAccountCode: "611001", paymentAccountNumber: nil, token: nil, expirationDate: nil, terminalCommConfig: terminal, industryType: TRANSACTION_INDUSTRY_TYPE_RETAIL, healthCareData: nil, disableEmv: false, disableAmountConfirmation: true, testMode: true);
+            let request = BPNPaymentRequest(invoiceNumber: String(count - 1), pnRefNum: t_pnRef, amount: amt, tipAmount: NSDecimalNumber(string: t_amount), cashBackAmount: nil, tenderType: TENDER_TYPE_CREDIT, transactionType: t_transType, username: "mglpgtest", password: "57!sE@3Fm", merchantCode: "611000", merchantAccountCode: "611002", paymentAccountNumber: nil, token: nil, expirationDate: nil, terminalCommConfig: terminal, industryType: TRANSACTION_INDUSTRY_TYPE_RETAIL, healthCareData: nil, disableEmv: false, disableAmountConfirmation: true, testMode: true);
             
             let transaction = PayGuardianTransaction(paymentRequest: request);
             transaction?.run(onCompletion: { (payment, error) in
@@ -196,6 +186,24 @@ class Transaction {
             }, onStateChanged: { (state) in
                 //print("state changed");
             })
+        }
+    }
+    
+    class func transactionComplete(payment:BPNPayment?) {
+        print("Transaction : onCompletion")
+        alert?.dismiss(animated: true, completion: nil);
+        completeTransaction(payment: payment, onComplete: onCompleteFunc!);
+    }
+    
+    class func stateChanged(state: PayGuardianTransactionState) {
+        print("Transaction : onStateChanged")
+        if (state == PayGuardianTransactionState.cardReadWithError) {
+            alert?.dismiss(animated: true, completion: nil);
+            completeTransaction(payment: nil, onComplete: onCompleteFunc!);
+        } else {
+            if (state == PayGuardianTransactionState.readingCard) {
+                alert?.message = "Processing, please wait...";
+            }
         }
     }
     

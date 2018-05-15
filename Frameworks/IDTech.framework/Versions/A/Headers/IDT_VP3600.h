@@ -125,7 +125,7 @@
 
 
 /**
- Cancels Transaction request (swipe or CTLS).
+ Cancels Transaction request (all interfaces, CTLS/MSR/INSERT).
  
  * @return RETURN_CODE:  Return codes listed as typedef enum in IDTCommon:RETURN_CODE.  Values can be parsed with IDT_VP3600::device_getResponseCodeString:()
  */
@@ -135,7 +135,7 @@
 
 
 /**
- Cancels Transaction request (EMV).
+ Cancels Transaction request (all interfaces, CTLS/MSR/INSERT).
  
  * @return RETURN_CODE:  Return codes listed as typedef enum in IDTCommon:RETURN_CODE.  Values can be parsed with IDT_VP3600::device_getResponseCodeString:()
  */
@@ -145,7 +145,7 @@
 
 
 /**
- Cancels Transaction request (EMV, swipe or CTLS).
+ Cancels Transaction request (all interfaces, CTLS/MSR/INSERT).
  
  * @return RETURN_CODE:  Return codes listed as typedef enum in IDTCommon:RETURN_CODE.  Values can be parsed with IDT_VP3600::device_getResponseCodeString:()
  */
@@ -167,7 +167,36 @@
  */
 -(RETURN_CODE) ctls_getConfigurationGroup:(int)group response:(NSDictionary**)response;
 
+/**
+ * Set Merchant Record
+ Sets the merchant record for ApplePay VAS
+ *
+ * @param index Merchant Record index, valid values 1-6
+ * @param enabled Merchant Enabled/Valid flag
+ * @param merchantID  Merchant unique identifer registered with Apple.  Example com.idtechproducts.applePay
+ * @param merchantURL Merchant URL, when applicable
+ *
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ *
+ */
+-(RETURN_CODE) device_setMerchantRecord:(int)index enabled:(bool)enabled merchantID:(NSString*)merchantID merchantURL:(NSString*)merchantURL;
 
+/**
+ * Get Merchant Record
+ Gets the merchant record for ApplePay VAS
+ *
+ * @param index Merchant Record index, valid values 1-6
+ * @param record Data returned containing 99 bytes:
+ * Byte 0 = Merchand Index
+ * Byte 1 = Merchant Enabled (1 = enabled)
+ * Byte 2 - 33 = Merchant Protocol Hash-256 value
+ * Byte 34 = Length of Merchant URL
+ * Bytes 35 - 99 = URL
+ *
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ *
+ */
+-(RETURN_CODE) device_getMerchantRecord:(int)index record:(NSData*)record;
 
 
 /**
@@ -276,8 +305,8 @@
 /**
  * Retrieve Terminal Data
  *
- Retrieves the Terminal Data for CTLS. This is configuration group 0 (Tag FFEE - > FFEE0100).  The terminal data
- can also be retrieved by ctls_getConfiguraitonGroup(0).
+ Retrieves the Terminal Data for CTLS. This is configuration group 0 (Tag DFEE2D - > DFEE2D0100).  The terminal data
+ can also be retrieved by ctls_getConfigurationGroup(0).
  
  @param tlv Response returned as a TLV
  
@@ -293,11 +322,11 @@
  Sets the Application Data for CTLS as specified by TLV data
  
  @param tlv  Application data in TLV format
- The first tag of the TLV data must be the group number (FFE4).
+ The first tag of the TLV data must be the group number (DFEE2D).
  The second tag of the TLV data must be the AID (9F06)
  
  Example valid TLV, for Group #2, AID a0000000035010:
- "ffe401029f0607a0000000051010ffe10101ffe50110ffe30114ffe20106"
+ "DFEE2D01029f0607a0000000051010DFEE4B0101DFEE2E0110DFEE4D0114DFEE4C0106"
  
  * @return RETURN_CODE:  Return codes listed as typedef enum in IDTCommon:RETURN_CODE.  Values can be parsed with IDT_VP3600::device_getResponseCodeString:()
  
@@ -330,7 +359,7 @@
  Sets the Configuration Group for CTLS as specified by the TLV data
  
  @param tlv  Configuration Group Data in TLV format
- The first tag of the TLV data must be the group number (FFE4).
+ The first tag of the TLV data must be the group number (DFEE2D).
  A second tag must exist
  
  
@@ -343,8 +372,8 @@
 /**
  * Set Terminal Data
  *
- Sets the Terminal Data for CTLS as specified by the TLV.  The first TLV must be Configuration Group Number (Tag FFE4).  The terminal global data
- is group 0, so the first TLV would be FFE40100.  Other groups can be defined using this method (1 or greater), and those can be
+ Sets the Terminal Data for CTLS as specified by the TLV.  The first TLV must be Configuration Group Number (Tag DFEE2D).  The terminal global data
+ is group 0, so the first TLV would be DFEE2D0100.  Other groups can be defined using this method (1 or greater), and those can be
  retrieved with ctls_getConfigurationGroup(int group), and deleted with ctls_removeConfigurationGroup(int group).  You cannot
  delete group 0.
  
@@ -372,10 +401,35 @@
  @param tags Any other tags to be included in the request.
  * @return RETURN_CODE:  Return codes listed as typedef enum in IDTCommon:RETURN_CODE.  Values can be parsed with IDT_VP3600::device_getResponseCodeString:()
  *
- * NOTE ON APPLEPAY VAS:
- * To enable ApplePay VAS, first a merchant record must be defined in one of the six available index positions (1-6) using device_setMerchantRecord, then container tag FFEE06
- * must be sent as part of the additional tags parameter of ctls_startTransaction.  Tag FFEE06 must contain tag 9F26 and 9F22, and can optionanally contain tags 9F2B and DFO1.
- * Example FFEE06189F220201009F2604000000009F2B050100000000DF010101
+ * NOTE ON INTERFACE SELECTION: For the VP3600, tag DFEF37 is used to determine which interfaces to use for the transaction:
+  - 01 = MSR Only
+  - 02 = CTLS Only
+  - 03 = MSR + CTLS
+  - 04 = EMV Only
+  - 05 = EMV + MSR
+  - 06 = EMV + CTLS
+  - 07 = EMV + MSR + CLTS.
+ This API method will automatically send DFEF37 with a value of 02 if this tag is not provided.
+ *
+ */
+-(RETURN_CODE) ctls_startTransaction:(double)amount type:(int)type timeout:(int)timeout tags:(NSMutableDictionary *)tags;
+
+/**
+ * Start a CTLS Transaction Request
+ *
+ Authorizes the CTLS transaction for an CTLS card, including AppleVAS and SmartTAP
+ 
+ The tags will be returned in the callback routine.
+ 
+ @param amount Transaction amount value  (tag value 9F02)
+ @param exponent Number of characters after decimile point
+ @param type Transaction type (tag value 9C).
+ @param timeout Timeout value in seconds.
+ @param transTags Any other transaction tags to be included in the request (excluding Apple VAS and SmartTap)
+ @param VAS Tags to enable the capture of Apple VAS
+ * To enable ApplePay VAS, first a merchant record must be defined in one of the six available index positions (1-6) using device_setMerchantRecord
+ * the VAS data must contain tags 9F26 and 9F22, and can optionanally contain tags 9F2B and DFO1.
+ * Example 9F220201009F2604000000009F2B050100000000DF010101
  * 9F22 = two bytes = ApplePay Terminal Applicaiton Version Number.  Hard defined as 0100 for now. (required)
  * 9F26 = four bytes = ApplePay Terminal Capabilities Information (required)
  *  - Byte 1 = RFU
@@ -404,25 +458,24 @@
  *  - - Bit 3 : 1 = Silent Comm Error, 2 = EMEA Comm Error
  *  - - Bit 4-8 : RFU
  *
- */
--(RETURN_CODE) ctls_startTransaction:(double)amount type:(int)type timeout:(int)timeout tags:(NSMutableDictionary *)tags;
-
-
-
-/**
- * Enable Transaction Request
- 
- *
- Enables CLTS and MSR, waiting for swipe or tap to occur. Returns IDTEMVData to deviceDelegate::emvTransactionData:()
- 
  
  * @return RETURN_CODE:  Return codes listed as typedef enum in IDTCommon:RETURN_CODE.  Values can be parsed with IDT_VP3600::device_getResponseCodeString:()
- 
- 
+ *
+ * NOTE ON INTERFACE SELECTION: For the VP3600, tag DFEF37 is used to determine which interfaces to use for the transaction:
+ - 01 = MSR Only
+ - 02 = CTLS Only
+ - 03 = MSR + CTLS
+ - 04 = EMV Only
+ - 05 = EMV + MSR
+ - 06 = EMV + CTLS
+ - 07 = EMV + MSR + CLTS.
+ This API method will automatically send DFEF37 with a value of 02 if this tag is not provided.
+ *
+ *
+ * NOTE ON APPLEPAY VAS:
+
  */
-
--(RETURN_CODE) ctls_startTransaction;
-
+-(RETURN_CODE) ctls_startTransaction:(double)amount type:(int)type timeout:(int)timeout transTags:(NSData *)transTags VAS:(NSData *)VAS;
 
 
 
@@ -547,8 +600,7 @@
  
  @code
  typedef enum{
- IDT_DEVICE_VP3600_IOS = 8
- IDT_DEVICE_VP3600_OSX_USB = 9
+ IDT_DEVICE_VP3600_IOS = 16
  }IDT_DEVICE_Types;
  
  @endcode
@@ -592,6 +644,7 @@
  
  */
 -(RETURN_CODE) device_setPassThrough:(BOOL)enablePassThrough;
+
 
 
 /**
@@ -1266,6 +1319,17 @@
  
  * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
  
+ *
+ * NOTE ON INTERFACE SELECTION: For the VP3600, tag DFEF37 is used to determine which interfaces to use for the transaction:
+ - 01 = MSR Only
+ - 02 = CTLS Only
+ - 03 = MSR + CTLS
+ - 04 = EMV Only
+ - 05 = EMV + MSR
+ - 06 = EMV + CTLS
+ - 07 = EMV + MSR + CLTS.
+ This API method will automatically send DFEF37 with a value of 04 if this tag is not provided.
+ *
  */
 -(RETURN_CODE) emv_startTransaction:(double)amount amtOther:(double)amtOther type:(int)type timeout:(int)timeout tags:(NSData*)tags forceOnline:(BOOL)forceOnline fallback:(BOOL)fallback;
 
@@ -1369,7 +1433,9 @@
  
  
  
- Cancels MSR swipe request.
+ Cancels Swipe.
+ 
+ Cancels Transaction request (all interfaces, CTLS/MSR/INSERT).
  
  * @return RETURN_CODE:  Return codes listed as typedef enum in IDTCommon:RETURN_CODE.  Values can be parsed with IDT_VP3600::device_getResponseCodeString:()
  */
@@ -1419,6 +1485,19 @@
  
  
  * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ *
+ * NOTE ON INTERFACE SELECTION: For the VP3600, tag DFEF37 is used to determine which interfaces to use for the transaction:
+ - 01 = MSR Only
+ - 02 = CTLS Only
+ - 03 = MSR + CTLS
+ - 04 = EMV Only
+ - 05 = EMV + MSR
+ - 06 = EMV + CTLS
+ - 07 = EMV + MSR + CLTS.
+ This API method will automatically send DFEF37 with a value of 07 if this tag is not provided.
+ *
+ 
  
  */
 -(RETURN_CODE) device_startTransaction:(double)amount amtOther:(double)amtOther type:(int)type timeout:(int)timeout tags:(NSData*)tags forceOnline:(BOOL)forceOnline  fallback:(BOOL)fallback;
@@ -1471,6 +1550,114 @@
  */
 -(RETURN_CODE) pin_capturePin:(int)type PAN:(NSString*)PAN minPIN:(int)minPIN maxPIN:(int)maxPIN message:(NSString*)message;
 
+
+
+/**
+ * FeliCa Authentication
+ *
+ Provides a key to be used in a follow up FeliCa Read with MAC (3 blocks max) or Write with MAC (1 block max).
+ This command must be executed before each Read w/MAC or Write w/MAC command
+ 
+ NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param key 16 byte key used for MAC generation of Read or Write with MAC
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_authentication:(NSData*)key;
+
+
+
+/**
+ * FeliCa Read with MAC Generation
+ *
+ Reads up to 3 blocks with MAC Generation.  FeliCa Authentication must be performed first
+ 
+  NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param blockList Block to read. Each block in blockList = 2 bytes of data.  Maximum 3 block requests (6 bytes of data)
+ @param blocks  Blocks read.  Each block 16 bytes.
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_readWithMac:(NSData*)blockList blocks:(NSData**)blocks;
+
+
+/**
+ * FeliCa Write with MAC Generation
+ *
+ Writes a block with MAC Generation.  FeliCa Authentication must be performed first
+ 
+  NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param blockNumber Number of block
+ @param data  Block to write.  Must be 16 bytes.
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_writeWithMac:(int)blockNumber data:(NSData*)data;
+
+
+/**
+ * FeliCa Read
+ *
+ Reads up to 4 blocks.
+ 
+  NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param serviceCode Service Code List. Each service code in Service Code List = 2 bytes of data
+ @param blockList Blocks to read. Each block in blockList = 2 bytes of data.  Maximum 4 block requests (8 bytes of data)
+ @param blocks  Blocks read.  Each block 16 bytes.
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_read:(NSData*)serviceCode blockList:(NSData*)blockList blocks:(NSData**)blocks;
+
+
+/**
+ * FeliCa Write
+ *
+ Writes a block
+ 
+  NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param serviceCode Service Code list.  Each service code must be be 2 bytes
+ @param blockList Block list.  Must be 3 bytes
+ @param data  Block to write.  Must be 16 bytes.
+ @param statusFlag  Status flag response as explained in FeliCA Lite-S User's Manual, Section 4.5
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_write:(NSData*)serviceCode blockList:(NSData*)blockList data:(NSData*)data statusFlag:(NSData**)statusFlag;
+
+/**
+ * FeliCa Poll for Card
+ *
+ Polls for a Felica Card
+ 
+  NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param systemCode System Code.  Must be 2 bytes
+ @param response  Poll response as explained in FeliCA Lite-S User's Manual
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_poll:(NSData*)systemCode response:(NSData**)response;
+
+
+/**
+ * FeliCa Request Service
+ *
+ Request Service for a Felica Card
+ 
+  NOTE: The reader must be in Pass Through Mode for FeliCa commands to work.
+ 
+ @param nodeCode Node Code List.  Each node 1 byte
+ @param response  Response as explained in FeliCA Lite-S User's Manual
+ * @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+ 
+ */
+-(RETURN_CODE) felica_requestService:(NSData*)nodeCode response:(NSData**)response;
 
 /**
  * Capture Amount Input
