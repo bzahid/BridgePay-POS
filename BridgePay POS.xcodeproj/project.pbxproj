@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0725409520B80BD100A6242B /* Mobelisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0725409420B80BD100A6242B /* Mobelisk.framework */; };
+		0725409620B80BD100A6242B /* Mobelisk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0725409420B80BD100A6242B /* Mobelisk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0D0DFF59202A973700AE7D8D /* block-icon-o.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D0DFF56202A973600AE7D8D /* block-icon-o.png */; };
 		0D0DFF5A202A973700AE7D8D /* cert-icon-o.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D0DFF57202A973600AE7D8D /* cert-icon-o.png */; };
 		0D0DFF5B202A973700AE7D8D /* flow-icon-o.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D0DFF58202A973700AE7D8D /* flow-icon-o.png */; };
@@ -27,8 +29,6 @@
 		0D1B55612034AA2E00634922 /* mobelisk-logo-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1B555E2034AA2E00634922 /* mobelisk-logo-light.png */; };
 		0D1B556820351E2000634922 /* cross-platform-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1B556420351E1E00634922 /* cross-platform-icon.png */; };
 		0D1B556920351E2000634922 /* payment-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D1B556720351E1F00634922 /* payment-icon.png */; };
-		0D237FFA20AA257600C89852 /* Mobelisk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D237FF920AA257600C89852 /* Mobelisk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0D237FFB20AA258E00C89852 /* Mobelisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D237FF920AA257600C89852 /* Mobelisk.framework */; };
 		0D237FFE20AA25A000C89852 /* IDTech.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D237FFC20AA259F00C89852 /* IDTech.bundle */; };
 		0D237FFF20AA25A000C89852 /* IDTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D237FFD20AA25A000C89852 /* IDTech.framework */; };
 		0D2B506C2027A08300F5B873 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2B506B2027A08300F5B873 /* ReceiptViewController.swift */; };
@@ -76,7 +76,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0D237FFA20AA257600C89852 /* Mobelisk.framework in Embed Frameworks */,
+				0725409620B80BD100A6242B /* Mobelisk.framework in Embed Frameworks */,
 				0D157D6B203DE5A900CD4303 /* Ono.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -85,6 +85,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0725409420B80BD100A6242B /* Mobelisk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mobelisk.framework; sourceTree = "<group>"; };
 		07F622662043053B0090AF98 /* BridgePay POS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BridgePay POS.entitlements"; sourceTree = "<group>"; };
 		0D0DFF56202A973600AE7D8D /* block-icon-o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "block-icon-o.png"; sourceTree = "<group>"; };
 		0D0DFF57202A973600AE7D8D /* cert-icon-o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cert-icon-o.png"; sourceTree = "<group>"; };
@@ -121,7 +122,6 @@
 		0D1B555E2034AA2E00634922 /* mobelisk-logo-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mobelisk-logo-light.png"; sourceTree = "<group>"; };
 		0D1B556420351E1E00634922 /* cross-platform-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross-platform-icon.png"; sourceTree = "<group>"; };
 		0D1B556720351E1F00634922 /* payment-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "payment-icon.png"; sourceTree = "<group>"; };
-		0D237FF920AA257600C89852 /* Mobelisk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mobelisk.framework; path = Frameworks/Mobelisk.framework; sourceTree = "<group>"; };
 		0D237FFC20AA259F00C89852 /* IDTech.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IDTech.bundle; sourceTree = "<group>"; };
 		0D237FFD20AA25A000C89852 /* IDTech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IDTech.framework; sourceTree = "<group>"; };
 		0D2B506B2027A08300F5B873 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +160,7 @@
 				0D237FFF20AA25A000C89852 /* IDTech.framework in Frameworks */,
 				0D588260207F9BBE006414E8 /* CoreGraphics.framework in Frameworks */,
 				0D58825F207F9BAF006414E8 /* CoreBluetooth.framework in Frameworks */,
+				0725409520B80BD100A6242B /* Mobelisk.framework in Frameworks */,
 				0D58825E207F9BA9006414E8 /* CoreTelephony.framework in Frameworks */,
 				0DF9833D206D3DA9000E39C1 /* ExternalAccessory.framework in Frameworks */,
 				0DF9833B206D3D9B000E39C1 /* AVFoundation.framework in Frameworks */,
@@ -176,7 +177,6 @@
 				0DDE07EE203083FB00B00C44 /* Foundation.framework in Frameworks */,
 				0D147679202E623C003AEF43 /* UIKit.framework in Frameworks */,
 				0D147676202E6156003AEF43 /* Ono.framework in Frameworks */,
-				0D237FFB20AA258E00C89852 /* Mobelisk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +215,7 @@
 		0DFEA4F32026E88B00DF5182 = {
 			isa = PBXGroup;
 			children = (
-				0D237FF920AA257600C89852 /* Mobelisk.framework */,
+				0725409420B80BD100A6242B /* Mobelisk.framework */,
 				0D14764D202E45C0003AEF43 /* Frameworks */,
 				0DFEA4FE2026E88B00DF5182 /* BridgePay POS */,
 				0DFEA4FD2026E88B00DF5182 /* Products */,
@@ -559,7 +559,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BridgePay POS/BridgePay POS.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9M9THEFZRQ;
+				DEVELOPMENT_TEAM = S44G79WUZA;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -569,7 +569,7 @@
 				INFOPLIST_FILE = "BridgePay POS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobelisk.mposdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bridgepay.demoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -589,7 +589,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BridgePay POS/BridgePay POS.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9M9THEFZRQ;
+				DEVELOPMENT_TEAM = S44G79WUZA;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -599,7 +599,7 @@
 				INFOPLIST_FILE = "BridgePay POS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobelisk.mposdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bridgepay.demoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
