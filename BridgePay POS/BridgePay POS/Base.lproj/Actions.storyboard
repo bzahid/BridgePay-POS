@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,20 +15,20 @@
             <objects>
                 <viewController storyboardIdentifier="Sale" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UGJ-Jj-pta" customClass="SubViewController" customModule="BridgePay_POS" customModuleProvider="target" sceneMemberID="viewController">
                     <stackView key="view" opaque="NO" contentMode="scaleToFill" axis="vertical" id="Z6v-Rr-lCv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ylz-wF-LnH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNq-FS-eA6">
-                                        <rect key="frame" x="168.5" y="256" width="38" height="24"/>
+                                        <rect key="frame" x="365" y="326" width="38" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sale-icon-light.png" translatesAutoresizingMaskIntoConstraints="NO" id="tJb-Dn-EkV">
-                                        <rect key="frame" x="87.5" y="50" width="200" height="200"/>
+                                        <rect key="frame" x="264" y="80" width="240" height="240"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="nak-au-Xv3">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="200"/>
@@ -36,7 +36,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suo-4K-Iqv">
-                                        <rect key="frame" x="131" y="94" width="112" height="112"/>
+                                        <rect key="frame" x="327.5" y="144" width="112" height="112"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="112" id="TX2-uB-w2s"/>
                                             <constraint firstAttribute="width" constant="112" id="haW-Hc-GUm"/>
@@ -67,16 +67,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qh0-AB-c9O">
-                                <rect key="frame" x="0.0" y="300" width="375" height="220"/>
+                                <rect key="frame" x="0.0" y="400" width="768" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tak-eb-Zp8">
-                                        <rect key="frame" x="153" y="176" width="69" height="24"/>
+                                        <rect key="frame" x="349.5" y="146" width="69" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="90" translatesAutoresizingMaskIntoConstraints="NO" id="qR0-xy-45D">
-                                        <rect key="frame" x="-12.5" y="54" width="400" height="112"/>
+                                        <rect key="frame" x="134" y="26" width="500" height="112"/>
                                         <color key="backgroundColor" red="0.10074759274721146" green="0.56814080476760864" blue="0.72422623634338379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="500" id="lfa-PH-ihB">
@@ -92,7 +92,7 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refund cannot be greater than amount of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6H-QU-Hya">
-                                        <rect key="frame" x="-12.5" y="12" width="400" height="34"/>
+                                        <rect key="frame" x="134" y="-16" width="500" height="34"/>
                                         <color key="backgroundColor" red="0.1006055833487608" green="0.37316395777004951" blue="0.48202296087533159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="lPk-cw-m8d"/>
@@ -121,10 +121,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCh-WQ-yS5">
-                                <rect key="frame" x="0.0" y="520" width="375" height="130"/>
+                                <rect key="frame" x="0.0" y="600" width="768" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qer-IZ-PEw">
-                                        <rect key="frame" x="62.5" y="35.5" width="250" height="60"/>
+                                        <rect key="frame" x="259" y="45.5" width="250" height="60"/>
                                         <color key="backgroundColor" red="0.1088890253" green="0.83989555699999996" blue="0.1857639099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="5Jw-4m-ePy"/>
@@ -147,7 +147,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBa-HV-sT3">
-                                <rect key="frame" x="0.0" y="650" width="375" height="17"/>
+                                <rect key="frame" x="0.0" y="750" width="768" height="274"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF0-Ng-Odi">
                                         <rect key="frame" x="120" y="339" width="25" height="30"/>
@@ -157,11 +157,19 @@
                                             <segue destination="2Xp-4R-qZi" kind="show" id="T9y-FX-dYe"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdp-9Z-bc0" userLabel="Error Button">
+                                        <rect key="frame" x="180" y="339" width="25" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title=" "/>
+                                        <connections>
+                                            <segue destination="xqD-Nx-KvC" kind="show" id="Utc-0y-fnR"/>
+                                        </connections>
+                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7l-eP-saZ">
-                                        <rect key="frame" x="27.5" y="-23" width="320" height="50"/>
+                                        <rect key="frame" x="176.5" y="224" width="415" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logos.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qwd-Hm-sb1">
-                                                <rect key="frame" x="102.5" y="8" width="220" height="30"/>
+                                                <rect key="frame" x="128" y="3" width="290" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="290" id="fOi-8e-Mvb">
                                                         <variation key="heightClass=regular-widthClass=compact" constant="220"/>
@@ -173,7 +181,7 @@
                                                 <variation key="heightClass=regular-widthClass=compact" image="logos-light.png"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zf4-AB-S5L">
-                                                <rect key="frame" x="0.0" y="15" width="95.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="12" width="121" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <color key="textColor" red="0.10588235294117647" green="0.35686274509803922" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -223,6 +231,7 @@
                     <connections>
                         <outlet property="amountField" destination="qR0-xy-45D" id="nRI-Yb-ZFg"/>
                         <outlet property="completeButton" destination="aF0-Ng-Odi" id="nMg-IB-Nhw"/>
+                        <outlet property="errorButton" destination="Vdp-9Z-bc0" id="h0o-Sv-lpu"/>
                         <outlet property="processPaymentButton" destination="qer-IZ-PEw" id="8nt-UO-W04"/>
                         <outlet property="refundLabel" destination="X6H-QU-Hya" id="QzD-lq-dM4"/>
                         <outlet property="transactionImageView" destination="tJb-Dn-EkV" id="tfl-MW-bGP"/>
@@ -232,21 +241,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Le-lq-3Jb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ujp-mV-ilv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="924" y="77.811094452773617"/>
+            <point key="canvasLocation" x="942" y="100"/>
         </scene>
         <!--Receipt View Controller-->
         <scene sceneID="XrJ-7Y-TbQ">
             <objects>
-                <viewController storyboardIdentifier="Receipt" id="2Xp-4R-qZi" customClass="ReceiptViewController" customModule="BridgePay_POS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Receipt" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Xp-4R-qZi" customClass="ReceiptViewController" customModule="BridgePay_POS" customModuleProvider="target" sceneMemberID="viewController">
                     <stackView key="view" opaque="NO" contentMode="scaleToFill" axis="vertical" id="bju-bg-e51">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbs-mI-N6j">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="250"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k4-2j-jOx">
-                                        <rect key="frame" x="140" y="46.5" width="96" height="78"/>
+                                        <rect key="frame" x="324" y="116" width="121" height="101.5"/>
                                         <string key="text">Test Merchant
 100 North Drive
 Suite 100
@@ -260,7 +269,7 @@ Orlando, FL
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approved  -  $12.34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeR-kX-VjS">
-                                        <rect key="frame" x="86" y="10" width="204" height="26.5"/>
+                                        <rect key="frame" x="246.5" y="50" width="276" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" red="0.11144185811281204" green="0.59455400705337524" blue="0.77808684110641479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -282,19 +291,19 @@ Orlando, FL
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xxf-Xf-XOY">
-                                <rect key="frame" x="0.0" y="230" width="375" height="337"/>
+                                <rect key="frame" x="0.0" y="250" width="768" height="646"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zaX-9m-bXt">
-                                        <rect key="frame" x="71.5" y="-83" width="232" height="463"/>
+                                        <rect key="frame" x="173" y="-3" width="422" height="652"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="sn1-cp-1FN">
-                                                <rect key="frame" x="0.0" y="0.0" width="232" height="463"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="422" height="652"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="a9X-7I-tTT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="463"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124" height="652"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFr-TH-fJG">
-                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -303,7 +312,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LJ-pD-ZTb">
-                                                                <rect key="frame" x="0.0" y="30.5" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -312,7 +321,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acount #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAC-ps-7TB">
-                                                                <rect key="frame" x="0.0" y="61" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="88" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -321,7 +330,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ9-J5-hES">
-                                                                <rect key="frame" x="0.0" y="91.5" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="132" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -330,7 +339,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxX-IT-2Ed">
-                                                                <rect key="frame" x="0.0" y="122" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="176" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -339,7 +348,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reference #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3y-Qg-P6x">
-                                                                <rect key="frame" x="0.0" y="152.5" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="220" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -348,7 +357,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkZ-Va-rxV">
-                                                                <rect key="frame" x="0.0" y="183" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="264" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -357,7 +366,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entry Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUu-cg-vDN">
-                                                                <rect key="frame" x="0.0" y="213.5" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="308" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -366,7 +375,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chip Card AID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGU-3Z-N1Z">
-                                                                <rect key="frame" x="0.0" y="244" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="352" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -375,7 +384,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authorization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sob-AL-d86">
-                                                                <rect key="frame" x="0.0" y="274.5" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="396" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -384,7 +393,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sale Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCU-4r-ySu">
-                                                                <rect key="frame" x="0.0" y="305" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="440" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -393,7 +402,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JJ-aW-fMb">
-                                                                <rect key="frame" x="0.0" y="335.5" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="484" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -402,7 +411,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ub-Zb-JW4">
-                                                                <rect key="frame" x="0.0" y="366" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="528" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -411,7 +420,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q34-JT-xpk">
-                                                                <rect key="frame" x="0.0" y="396.5" width="110" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="572" width="124" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -420,7 +429,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ih-4M-v8B">
-                                                                <rect key="frame" x="0.0" y="427" width="110" height="36"/>
+                                                                <rect key="frame" x="0.0" y="616" width="124" height="36"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="textColor" red="0.075340869219999995" green="0.44552344999999999" blue="0.56479399009999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -429,10 +438,10 @@ Orlando, FL
                                                         <variation key="heightClass=regular-widthClass=compact" spacing="10"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JbH-OW-KKC">
-                                                        <rect key="frame" x="190" y="0.0" width="42" height="463"/>
+                                                        <rect key="frame" x="374" y="0.0" width="48" height="652"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lph-UA-QoP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -441,7 +450,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zb-tc-BR7">
-                                                                <rect key="frame" x="0.0" y="30.5" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="44" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -450,7 +459,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuz-8L-Igh">
-                                                                <rect key="frame" x="0.0" y="61" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="88" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -459,7 +468,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsx-gm-aGE">
-                                                                <rect key="frame" x="0.0" y="91.5" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="132" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -468,7 +477,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUI-Mh-vAb">
-                                                                <rect key="frame" x="0.0" y="122" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="176" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -477,7 +486,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6D0-Zo-YKQ">
-                                                                <rect key="frame" x="0.0" y="152.5" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="220" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -486,7 +495,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8i-Zx-lgx">
-                                                                <rect key="frame" x="0.0" y="183" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="264" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -495,7 +504,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kig-Pu-i1d">
-                                                                <rect key="frame" x="0.0" y="213.5" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="308" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -504,7 +513,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypl-Gi-du4">
-                                                                <rect key="frame" x="0.0" y="244" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="352" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -513,7 +522,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjA-P1-0fo">
-                                                                <rect key="frame" x="0.0" y="274.5" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="396" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -522,7 +531,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCW-ea-GjM">
-                                                                <rect key="frame" x="0.0" y="305" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="440" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -531,7 +540,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmd-am-Osm">
-                                                                <rect key="frame" x="0.0" y="335.5" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="484" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -540,7 +549,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oE-tR-a9a">
-                                                                <rect key="frame" x="0.0" y="366" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="528" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -549,7 +558,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skf-u9-jgc">
-                                                                <rect key="frame" x="0.0" y="396.5" width="42" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="572" width="48" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <color key="textColor" red="0.066666666666666666" green="0.46666666666666667" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -558,7 +567,7 @@ Orlando, FL
                                                                 </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akh-iB-oMJ">
-                                                                <rect key="frame" x="0.0" y="427" width="42" height="36"/>
+                                                                <rect key="frame" x="0.0" y="616" width="48" height="36"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                                 <color key="textColor" red="0.075340869219999995" green="0.44552344999999999" blue="0.56479399009999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -581,10 +590,10 @@ Orlando, FL
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bs2-yo-cxM">
-                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="896" width="768" height="128"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovu-JJ-wWs">
-                                        <rect key="frame" x="62.5" y="25" width="250" height="50"/>
+                                        <rect key="frame" x="259" y="34" width="250" height="60"/>
                                         <color key="backgroundColor" red="0.1088890253" green="0.83989555699999996" blue="0.1857639099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="2bW-5f-svM"/>
@@ -644,33 +653,137 @@ Orlando, FL
             </objects>
             <point key="canvasLocation" x="1719.53125" y="77.9296875"/>
         </scene>
+        <!--Error-->
+        <scene sceneID="URe-Oe-czX">
+            <objects>
+                <viewController storyboardIdentifier="Error" title="Error" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xqD-Nx-KvC" customClass="SubViewController" customModule="BridgePay_POS" customModuleProvider="target" sceneMemberID="viewController">
+                    <stackView key="view" opaque="NO" contentMode="scaleToFill" axis="vertical" id="RFC-yv-vca">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9FD-Q4-3I8">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-8k-09k">
+                                        <rect key="frame" x="324" y="116" width="121" height="101.5"/>
+                                        <string key="text">Test Merchant
+100 North Drive
+Suite 100
+Orlando, FL
+555-222-888</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.086274509799999996" green="0.49019607840000001" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h3-fQ-eqn">
+                                        <rect key="frame" x="264.5" y="50" width="240" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" red="0.1114418581" green="0.59455400709999995" blue="0.77808684110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        </variation>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Transaction failed with error" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xjj-4P-GJK">
+                                        <rect key="frame" x="134" y="325" width="500" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="LjA-5e-068">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="128" id="PWY-qo-Xh9"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.066666666669999999" green="0.46666666670000001" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94869023559999999" green="0.9732157588" blue="0.97944492100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="xjj-4P-GJK" firstAttribute="centerX" secondItem="9FD-Q4-3I8" secondAttribute="centerX" id="Zca-6h-jKf"/>
+                                    <constraint firstItem="9h3-fQ-eqn" firstAttribute="top" secondItem="9FD-Q4-3I8" secondAttribute="top" constant="50" id="cqs-yh-7A0">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                    </constraint>
+                                    <constraint firstItem="xjj-4P-GJK" firstAttribute="top" secondItem="ch2-8k-09k" secondAttribute="bottom" constant="107.5" id="nJ6-OF-bfz"/>
+                                    <constraint firstItem="ch2-8k-09k" firstAttribute="centerX" secondItem="9FD-Q4-3I8" secondAttribute="centerX" id="piJ-tU-drF"/>
+                                    <constraint firstItem="9h3-fQ-eqn" firstAttribute="centerX" secondItem="9FD-Q4-3I8" secondAttribute="centerX" id="s8r-BL-8Jc"/>
+                                    <constraint firstItem="ch2-8k-09k" firstAttribute="top" secondItem="9h3-fQ-eqn" secondAttribute="bottom" constant="30" id="tsH-IO-dcy">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                    </constraint>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCD-Q8-vZ8">
+                                <rect key="frame" x="0.0" y="896" width="768" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzw-9k-sSE">
+                                        <rect key="frame" x="259" y="34" width="250" height="60"/>
+                                        <color key="backgroundColor" red="0.1088890253" green="0.83989555699999996" blue="0.1857639099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="e3m-hK-vuZ"/>
+                                            <constraint firstAttribute="height" constant="60" id="w2C-CH-aWk">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="gPQ-Lf-mbf" kind="show" id="c7M-gu-3kP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94869023559999999" green="0.9732157588" blue="0.97944492100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="zzw-9k-sSE" firstAttribute="top" secondItem="HCD-Q8-vZ8" secondAttribute="top" constant="34" id="GlC-z9-G1l">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                                    </constraint>
+                                    <constraint firstItem="zzw-9k-sSE" firstAttribute="centerX" secondItem="HCD-Q8-vZ8" secondAttribute="centerX" id="JbX-fJ-PRR"/>
+                                    <constraint firstItem="zzw-9k-sSE" firstAttribute="centerY" secondItem="HCD-Q8-vZ8" secondAttribute="centerY" id="N6X-ka-qKq">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                    </constraint>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k7X-OM-fR1"/>
+                    </stackView>
+                    <connections>
+                        <outlet property="descriptionField" destination="xjj-4P-GJK" id="GhH-iN-Jrb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nT3-R0-AkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479.1999999999998" y="77.811094452773617"/>
+        </scene>
         <!--Main-->
         <scene sceneID="CLl-8v-WvM">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="Main" storyboardName="Main" referencedIdentifier="Main" id="gPQ-Lf-mbf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQb-0q-fWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="513"/>
+            <point key="canvasLocation" x="2091" y="536"/>
         </scene>
         <!--Sub View Controller-->
         <scene sceneID="gdG-uY-uvX">
             <objects>
                 <viewController storyboardIdentifier="Void" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YtI-lM-Zde" customClass="SubViewController" customModule="BridgePay_POS" customModuleProvider="target" sceneMemberID="viewController">
                     <stackView key="view" opaque="NO" contentMode="scaleToFill" axis="vertical" id="KME-jB-sMO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VsU-8N-UgK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="500"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Void" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IS-Bt-t6a">
-                                        <rect key="frame" x="169" y="326" width="38.5" height="24"/>
+                                        <rect key="frame" x="365.5" y="326" width="38.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="void-icon-light.png" translatesAutoresizingMaskIntoConstraints="NO" id="cjV-JW-JJ0">
-                                        <rect key="frame" x="67.5" y="80" width="240" height="240"/>
+                                        <rect key="frame" x="264" y="80" width="240" height="240"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="AzW-6l-QNR"/>
                                         </constraints>
@@ -686,10 +799,10 @@ Orlando, FL
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4z-HH-h9d">
-                                <rect key="frame" x="0.0" y="500" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="500" width="768" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJu-e3-q2M">
-                                        <rect key="frame" x="62.5" y="45" width="250" height="60"/>
+                                        <rect key="frame" x="259" y="45" width="250" height="60"/>
                                         <color key="backgroundColor" red="0.1088890253" green="0.83989555699999996" blue="0.1857639099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="eJ7-ao-DT7"/>
@@ -717,20 +830,20 @@ Orlando, FL
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQN-9P-AIq">
-                                <rect key="frame" x="0.0" y="650" width="375" height="17"/>
+                                <rect key="frame" x="0.0" y="650" width="768" height="374"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVI-66-45K">
-                                        <rect key="frame" x="0.0" y="27" width="30" height="30"/>
+                                        <rect key="frame" x="0.0" y="374" width="30" height="30"/>
                                         <state key="normal" title=" "/>
                                         <connections>
                                             <segue destination="2Xp-4R-qZi" kind="show" id="RcD-bg-Xrv"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wA-7J-5BX">
-                                        <rect key="frame" x="27.5" y="-23" width="320" height="50"/>
+                                        <rect key="frame" x="176.5" y="324" width="415" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logos.png" translatesAutoresizingMaskIntoConstraints="NO" id="8oE-AE-Mcl">
-                                                <rect key="frame" x="102.5" y="9" width="220" height="30"/>
+                                                <rect key="frame" x="128" y="2" width="290" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="qDc-Rl-mvx">
                                                         <variation key="heightClass=regular-widthClass=compact" constant="30"/>
@@ -742,7 +855,7 @@ Orlando, FL
                                                 <variation key="heightClass=regular-widthClass=compact" image="logos-light.png"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yu-Je-Ew4">
-                                                <rect key="frame" x="0.0" y="15" width="95.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="12" width="121" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <color key="textColor" red="0.10588235294117647" green="0.35686274509803922" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -806,6 +919,7 @@ Orlando, FL
         <image name="void-icon-light.png" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="c7M-gu-3kP"/>
         <segue reference="T9y-FX-dYe"/>
     </inferredMetricsTieBreakers>
 </document>

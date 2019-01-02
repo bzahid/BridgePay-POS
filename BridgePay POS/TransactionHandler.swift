@@ -97,6 +97,11 @@ class TransactionHandler: NSObject, IDT_VP3300_Delegate {
                 
                 // Pass emv data to PayGuardian
                 transaction?.vp3300sendTransactionData(emvData, errorCode: error, onCompletion: { (payment, error) in
+                    Transaction.errorMsg = "";
+                    if (error != nil) {
+                        Transaction.errorMsg = (error?.localizedDescription)!;
+                        Transaction.errorMsg = Transaction.errorMsg.isEmpty ? "Failed to process transaction. An unknwown error occurred." : Transaction.errorMsg;
+                    }
                     Transaction.transactionComplete(payment: payment)
                 }, onStateChanged: { (state) in
                     Transaction.stateChanged(state: state)

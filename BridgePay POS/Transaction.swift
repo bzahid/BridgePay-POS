@@ -29,6 +29,7 @@ class Transaction: NSObject {
     static var svc:SubViewController?
     static var onCompleteFunc:(() -> Void)?
     static var disableEmv = true;
+    static var errorMsg = "";
     
     class func setAmount(amount: String) {
         t_amount = amount;
@@ -181,6 +182,9 @@ class Transaction: NSObject {
             
             let transaction = PayGuardianTransaction(paymentRequest: request);
             transaction?.run(onCompletion: { (payment, error) in
+                if (error != nil) {
+                    errorMsg = (error?.localizedDescription)!;
+                }
                 updateTotals();
                 onComplete();
             }, onStateChanged: { (state) in
@@ -198,6 +202,7 @@ class Transaction: NSObject {
     class func stateChanged(state: PayGuardianTransactionState) {
         print("Transaction : onStateChanged")
         if (state == PayGuardianTransactionState.cardReadWithError) {
+            errorMsg = "An error occurred while reading the card.";
             alert?.dismiss(animated: true, completion: nil);
             completeTransaction(payment: nil, onComplete: onCompleteFunc!);
         } else {
@@ -209,7 +214,10 @@ class Transaction: NSObject {
     
     class func completeTransaction(payment: BPNPayment?, onComplete:@escaping (() -> Void)) {
         
-        if(payment != nil && payment?.bridgeCommResponse != nil && payment?.bridgeCommResponse.gatewayTransactionID != nil) {
+        if (!errorMsg.isEmpty && payment != nil && payment?.bridgeCommResponse != nil) {
+            errorMsg = "An error occurred: " + (payment?.bridgeCommResponse.gatewayMessage)!;
+            
+        } else if (payment != nil && payment?.bridgeCommResponse != nil && payment?.bridgeCommResponse.gatewayTransactionID != nil) {
             setPnRef(pnRef: (payment?.bridgeCommResponse.gatewayTransactionID)!);
             
             if (payment?.receipt != nil) {
@@ -219,10 +227,6 @@ class Transaction: NSObject {
                 setTransactionId(seq: (payment?.receipt.seq)!);
             }
             
-        } else {
-            setPnRef(pnRef: "242462604");
-            setAuth(auth: "666052");
-            setTransactionId(seq: String(count));
         }
         
         updateTotals();
