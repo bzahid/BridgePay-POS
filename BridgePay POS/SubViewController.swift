@@ -16,11 +16,16 @@ class SubViewController: CustomNav, UITextFieldDelegate {
     @IBOutlet weak var transactionImageView: UIImageView!
     @IBOutlet weak var transactionTypeLabel: UILabel!
     @IBOutlet weak var refundLabel: UILabel!
+    @IBOutlet weak var errorButton: UIButton!
+    @IBOutlet weak var descriptionField: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        if(Transaction.isRefund()) {
+        if(!Transaction.errorMsg.isEmpty) {
+            descriptionField.text = Transaction.errorMsg;
+            
+        } else if(Transaction.isRefund()) {
             transactionImageView.image = UIImage(named: "refund-icon-light");
             transactionTypeLabel.text = "Refund";
             refundLabel.layer.cornerRadius = 4.0;
@@ -38,7 +43,10 @@ class SubViewController: CustomNav, UITextFieldDelegate {
             processPaymentButton.setTitle("Process Tip", for: UIControlState.normal);
         }
         
-        completeButton.isEnabled = false;
+        if (self.restorationIdentifier != "Error") {
+            completeButton.isEnabled = false;
+            errorButton.isEnabled = false;
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,9 +55,16 @@ class SubViewController: CustomNav, UITextFieldDelegate {
     }
     
     func completeSale() {
-        DispatchQueue.main.async {
-            self.completeButton.isEnabled = true;
-            self.completeButton.sendActions(for: .touchUpInside);
+        if (!Transaction.errorMsg.isEmpty) {
+            DispatchQueue.main.async {
+                self.errorButton.isEnabled = true;
+                self.errorButton.sendActions(for: .touchUpInside);
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.completeButton.isEnabled = true;
+                self.completeButton.sendActions(for: .touchUpInside);
+            }
         }
     }
     

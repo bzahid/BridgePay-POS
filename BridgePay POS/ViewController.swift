@@ -72,6 +72,8 @@ class ViewController: CustomNav, UITextFieldDelegate {
     }
     
     func buttonPressed() {
+        Transaction.errorMsg = "";
+        
         if(!Transaction.isSale() && Transaction.getPnRef() == "") {
             let alert = UIAlertController(title: "Unavailable", message: "Please start a new sale first.", preferredStyle: .alert);
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil));
